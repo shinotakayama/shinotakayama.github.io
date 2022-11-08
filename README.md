@@ -1,0 +1,1 @@
+# shinotakayama.github.io
