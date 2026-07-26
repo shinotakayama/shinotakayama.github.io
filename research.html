@@ -1,1 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research, publications, working papers and outreach by Shino Takayama.">
+  <title>Research | Shino Takayama</title>
 
+  <style>
+    :root {
+      --navy: #17365d;
+      --navy-dark: #102844;
+      --ink: #202733;
+      --muted: #657080;
+      --line: #dce2e8;
+      --paper: #ffffff;
+      --background: #f5f7f9;
+      --working: #416b57;
+      --progress: #8a5a24;
+      --max-width: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--navy);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover { color: var(--navy-dark); }
+
+    .site-header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner,
+    main,
+    footer {
+      width: min(calc(100% - 36px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .header-inner {
+      padding: 34px 0 24px;
+    }
+
+    .name {
+      margin: 0;
+      color: var(--navy-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      font-weight: 600;
+    }
+
+    .affiliation {
+      margin: 9px 0 0;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      margin-top: 23px;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    nav a[aria-current="page"] {
+      color: var(--navy-dark);
+      border-bottom: 2px solid var(--navy);
+    }
+
+    main {
+      padding: 46px 0 70px;
+    }
+
+    .intro {
+      max-width: 850px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.12rem;
+    }
+
+    .jump-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0 12px;
+    }
+
+    .jump-links a,
+    .button {
+      display: inline-block;
+      border: 1px solid var(--navy);
+      border-radius: 999px;
+      padding: 7px 13px;
+      text-decoration: none;
+      font-size: .91rem;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .jump-links a:hover,
+    .button:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    section {
+      scroll-margin-top: 24px;
+      margin-top: 64px;
+    }
+
+    h2 {
+      margin: 0 0 22px;
+      padding-bottom: 9px;
+      border-bottom: 2px solid var(--navy);
+      color: var(--navy-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .section-note {
+      margin: -9px 0 24px;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .paper {
+      margin: 0 0 18px;
+      padding: 22px 24px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--navy);
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(24, 39, 58, .04);
+    }
+
+    .paper.working { border-left-color: var(--working); }
+    .paper.progress { border-left-color: var(--progress); }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .working .label { color: var(--working); }
+    .progress .label { color: var(--progress); }
+
+    .paper h3 {
+      margin: 0 0 6px;
+      color: var(--navy-dark);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.19rem;
+      line-height: 1.38;
+    }
+
+    .authors,
+    .citation {
+      margin: 4px 0;
+    }
+
+    .authors { color: #465160; }
+    .citation { color: #2d3540; }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 13px;
+    }
+
+    .outreach-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .outreach-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .outreach-list li:last-child { border-bottom: 0; }
+
+    .outreach-list a {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 600;
+    }
+
+    .date-source {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: .93rem;
+    }
+
+    footer {
+      padding: 25px 0 38px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 620px) {
+      body { font-size: 16px; }
+      .header-inner { padding-top: 25px; }
+      main { padding-top: 34px; }
+      .paper { padding: 19px 18px; }
+      section { margin-top: 50px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="name">Shino Takayama</h1>
+      <p class="affiliation">School of Economics · The University of Queensland</p>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html" aria-current="page">Research</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="intro">
+      <h2>Research</h2>
+      <p>
+        My research lies at the intersection of <strong>microeconomic theory,
+        political economy, and financial economics</strong>. I am particularly
+        interested in how institutions shape <strong>strategic behaviour,
+        collective decision-making, the aggregation of dispersed information,
+        and economic outcomes</strong>. My work combines rigorous theoretical
+        modelling with empirical and policy-oriented research.
+      </p>
+    </div>
+
+    <div class="jump-links" aria-label="Page sections">
+      <a href="#publications">Journal articles</a>
+      <a href="#working-papers">Working papers</a>
+      <a href="#research-in-progress">Research in progress</a>
+      <a href="#supplementary">Supplementary notes</a>
+      <a href="#outreach">Outreach</a>
+    </div>
+
+    <section id="publications">
+      <h2>Journal Articles</h2>
+      <p class="section-note">Listed in reverse chronological order. Links lead to the publisher's version of record.</p>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>Peer Effects and Academic Performance: The Impact of Secondary Schoolmates in Undergraduate Classrooms</h3>
+        <p class="authors">Diego Carrasco, Sandro Díez-Amigo, Nhan Buu Phan, Shino Takayama and Haishan Yuan</p>
+        <p class="citation"><em>The B.E. Journal of Economic Analysis &amp; Policy</em> (2026).</p>
+        <div class="links">
+          <a class="button" href="https://www.degruyter.com/document/doi/10.1515/bejeap-2025-0161/html" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1515/bejeap-2025-0161" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>Policy Polarization, Primaries, and Strategic Voters</h3>
+        <p class="authors">Diego Carrasco, Shino Takayama, Yuki Tamura and Terence Yeo</p>
+        <p class="citation"><em>Mathematical Social Sciences</em>, 127, 19–35 (2024).</p>
+        <div class="links">
+          <a class="button" href="https://www.sciencedirect.com/science/article/pii/S0165489623000999" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1016/j.mathsocsci.2023.11.002" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>Price Manipulation, Dynamic Informed Trading, and the Uniqueness of Equilibrium in Sequential Trading</h3>
+        <p class="authors">Shino Takayama</p>
+        <p class="citation"><em>Journal of Economic Dynamics and Control</em>, 125, 104086 (2021).</p>
+        <div class="links">
+          <a class="button" href="https://www.sciencedirect.com/science/article/pii/S016518892100021X" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1016/j.jedc.2021.104086" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>Nash Equilibrium and Party Polarization in an Electoral Model with Mixed Motivations</h3>
+        <p class="authors">Shino Takayama, Yuki Tamura and Terence Yeo</p>
+        <p class="citation"><em>Journal of Public Economic Theory</em>, 21(2), 219–240 (2019).</p>
+        <div class="links">
+          <a class="button" href="https://onlinelibrary.wiley.com/doi/10.1111/jpet.12360" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1111/jpet.12360" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>Social Choice Correspondences with Infinitely Many Agents: Serial Dictatorship</h3>
+        <p class="authors">Shino Takayama and Akira Yokotani</p>
+        <p class="citation"><em>Social Choice and Welfare</em>, 48(3), 573–598 (2017).</p>
+        <div class="links">
+          <a class="button" href="https://link.springer.com/article/10.1007/s00355-017-1025-0" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1007/s00355-017-1025-0" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>A Trade and Welfare Analysis of Tariff Changes within the TPP</h3>
+        <p class="authors">Juyoung Cheong and Shino Takayama</p>
+        <p class="citation"><em>The B.E. Journal of Economic Analysis &amp; Policy</em>, 16(1), 477–511 (2016).</p>
+        <div class="links">
+          <a class="button" href="https://www.degruyter.com/document/doi/10.1515/bejeap-2014-0119/html" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1515/bejeap-2014-0119" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>A Hierarchical Agency Model of Deposit Insurance</h3>
+        <p class="authors">Jonathan Carroll and Shino Takayama</p>
+        <p class="citation"><em>Annals of Finance</em>, 10(2), 267–290 (2014).</p>
+        <div class="links">
+          <a class="button" href="https://link.springer.com/article/10.1007/s10436-013-0240-7" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1007/s10436-013-0240-7" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>A Unifying Impossibility Theorem</h3>
+        <p class="authors">Priscilla T. Y. Man and Shino Takayama</p>
+        <p class="citation"><em>Economic Theory</em>, 54(2), 249–271 (2013).</p>
+        <div class="links">
+          <a class="button" href="https://link.springer.com/article/10.1007/s00199-013-0750-6" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1007/s00199-013-0750-6" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>No Trade, Informed Trading, and Accuracy of Information</h3>
+        <p class="authors">Jayanaka Wijeratne and Shino Takayama</p>
+        <p class="citation"><em>Economics Bulletin</em>, 31(2), 1313–1321 (2011).</p>
+        <div class="links">
+          <a class="button" href="https://ideas.repec.org/a/ebl/ecbull/eb-10-00581.html" target="_blank" rel="noopener">Journal record</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>A Dynamic Strategy of the Informed Trader with Market Manipulation</h3>
+        <p class="authors">Shino Takayama</p>
+        <p class="citation"><em>Annals of Finance</em>, 6(2), 287–294 (2010).</p>
+        <div class="links">
+          <a class="button" href="https://link.springer.com/article/10.1007/s10436-009-0140-z" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1007/s10436-009-0140-z" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>Price, Trade Size, and Information Revelation in Multi-Period Securities Markets</h3>
+        <p class="authors">Han N. Ozsoylev and Shino Takayama</p>
+        <p class="citation"><em>Journal of Financial Markets</em>, 13(1), 49–76 (2010).</p>
+        <div class="links">
+          <a class="button" href="https://www.sciencedirect.com/science/article/pii/S1386418109000627" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1016/j.finmar.2009.10.002" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+
+      <article class="paper">
+        <span class="label">Journal article</span>
+        <h3>Office-Seeking Politicians, Interest Groups and Split Contributions in a Campaign Finance Model</h3>
+        <p class="authors">Shino Takayama</p>
+        <p class="citation"><em>International Journal of Economic Theory</em>, 3(4), 297–314 (2007).</p>
+        <div class="links">
+          <a class="button" href="https://onlinelibrary.wiley.com/doi/10.1111/j.1742-7363.2007.00061.x" target="_blank" rel="noopener">Publisher</a>
+          <a class="button" href="https://doi.org/10.1111/j.1742-7363.2007.00061.x" target="_blank" rel="noopener">DOI</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="working-papers">
+      <h2>Working Papers</h2>
+      <p class="section-note">
+        Links are provided for the current working papers and for all publicly archived earlier versions listed on the previous research page.
+      </p>
+
+      <article class="paper working">
+        <span class="label">Working paper</span>
+        <h3>Preferential Trade Agreements and Welfare: General Equilibrium Analysis</h3>
+        <p class="authors">Juyoung Cheong, Shino Takayama and Terence Yeo</p>
+        <div class="links">
+          <a class="button" href="https://economics.uq.edu.au/files/4066/482.pdf" target="_blank" rel="noopener">UQ Discussion Paper 482</a>
+        </div>
+      </article>
+
+      <article class="paper working">
+        <span class="label">Working paper</span>
+        <h3>Productivity and Firm Sizes: Evidence from Vietnam</h3>
+        <p class="authors">Pham Thu Hien, Shino Takayama and Nhan Buu Phan</p>
+        <div class="links">
+          <a class="button" href="https://www.dropbox.com/s/hd7ic08v0h1jizr/final_submit.pdf?dl=0" target="_blank" rel="noopener">Working paper</a>
+        </div>
+      </article>
+
+      <p class="section-note"><strong>Earlier publicly archived versions of “Productivity and Firm Sizes: Evidence from Vietnam”</strong></p>
+
+      <article class="paper working">
+        <span class="label">Working paper</span>
+        <h3>Revisiting the “Missing Middle”: Production and Corruption</h3>
+        <p class="authors">Thu Hien Pham and Shino Takayama</p>
+        <div class="links">
+          <a class="button" href="https://economics.uq.edu.au/files/5236/WP022015.pdf" target="_blank" rel="noopener">UQ CEPA Working Paper 02/2015</a>
+        </div>
+      </article>
+
+      <article class="paper working">
+        <span class="label">Working paper</span>
+        <h3>Firm Size Distribution, Production Efficiency, and Returns to Scale: A Stochastic Frontier Approach</h3>
+        <p class="authors">Thu Hien Pham and Shino Takayama</p>
+        <div class="links">
+          <a class="button" href="https://economics.uq.edu.au/files/46180/581.pdf" target="_blank" rel="noopener">UQ Discussion Paper 581</a>
+        </div>
+      </article>
+
+      <article class="paper working">
+        <span class="label">Working paper</span>
+        <h3>Revisiting the “Missing Middle”: Productivity Analysis</h3>
+        <p class="authors">Thu Hien Pham and Shino Takayama</p>
+        <div class="links">
+          <a class="button" href="https://economics.uq.edu.au/files/46179/580.pdf" target="_blank" rel="noopener">UQ Discussion Paper 580</a>
+        </div>
+      </article>
+
+      <article class="paper working">
+        <span class="label">Working paper</span>
+        <h3>A Model of Two-Stage Electoral Competition with Strategic Voters</h3>
+        <p class="authors">Shino Takayama, Yuki Tamura and Terence Yeo</p>
+        <div class="links">
+          <a class="button" href="https://economics.uq.edu.au/files/4589/525.pdf" target="_blank" rel="noopener">UQ Discussion Paper 525</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="research-in-progress">
+      <h2>Research in Progress</h2>
+
+      <article class="paper progress">
+        <span class="label">Research in progress</span>
+        <h3>Strategic Voting under the Single Transferable Vote</h3>
+      </article>
+
+      <article class="paper progress">
+        <span class="label">Research in progress</span>
+        <h3>Information Aggregation in Blockchain Consensus</h3>
+      </article>
+
+      <article class="paper progress">
+        <span class="label">Research in progress</span>
+        <h3>Housing Finance as a Tool of Market Stewardship</h3>
+      </article>
+    </section>
+
+    <section id="supplementary">
+      <h2>Supplementary Notes</h2>
+
+      <article class="paper">
+        <span class="label">Supplementary note</span>
+        <h3>A Unifying Impossibility Theorem for Compact Metric Social Alternatives Space</h3>
+        <p class="authors">Priscilla T. Y. Man and Shino Takayama</p>
+        <p class="citation">
+          This note extends the main theorem in Man and Takayama (2013) to the case in which
+          the set of social alternatives is a compact metric space.
+        </p>
+        <div class="links">
+          <a class="button" href="https://economics.uq.edu.au/files/4057/477.pdf" target="_blank" rel="noopener">UQ Discussion Paper 477</a>
+        </div>
+      </article>
+    </section>
+
+    <section id="outreach">
+      <h2>Outreach</h2>
+
+      <ul class="outreach-list">
+        <li>
+          <a href="https://www.timeshighereducation.com/campus/enhancing-thesis-experience-insights-masters-students" target="_blank" rel="noopener">
+            Enhancing the thesis experience: insights from master’s students
+          </a>
+          <span class="date-source">Times Higher Education Campus, 28 January 2025</span>
+        </li>
+
+        <li>
+          <a href="https://soundcloud.com/radiosputnik/speeding-free-trade-agreements-is-very-good-as-a-message-against-rise-of-protectionism-expert" target="_blank" rel="noopener">
+            Speeding free trade agreements as a message against the rise of protectionism
+          </a>
+          <span class="date-source">Radio Sputnik World Service, 22 March 2018</span>
+        </li>
+
+        <li>
+          <a href="https://soundcloud.com/radiosputnik/deal-between-japan-and-eu-is-trying-to-build-up-their-own-rules-and-standards-shino-takayama" target="_blank" rel="noopener">
+            The European Union and Japan concluded negotiations on a free trade deal
+          </a>
+          <span class="date-source">Radio Sputnik World Service, 11 December 2017</span>
+        </li>
+
+        <li>
+          <a href="https://theconversation.com/explainer-why-the-japanese-economy-is-stuck-in-a-holding-pattern-65806" target="_blank" rel="noopener">
+            Explainer: why the Japanese economy is stuck in a holding pattern
+          </a>
+          <span class="date-source">The Conversation, 22 September 2016</span>
+        </li>
+
+        <li>
+          <a href="https://theconversation.com/business-briefing-abenomics-fails-to-address-japans-true-woes-63398" target="_blank" rel="noopener">
+            Abenomics fails to address Japan’s true woes
+          </a>
+          <span class="date-source">The Conversation, 3 August 2016</span>
+        </li>
+
+        <li>
+          <a href="https://theconversation.com/japanese-tax-hikes-loom-large-for-abenomics-22403" target="_blank" rel="noopener">
+            Japanese tax hikes loom large for Abenomics
+          </a>
+          <span class="date-source">The Conversation, 21 February 2014</span>
+        </li>
+
+        <li>
+          <a href="https://theconversation.com/japans-abe-unveils-much-needed-tax-rises-stimulus-measures-18750" target="_blank" rel="noopener">
+            Japan’s Abe unveils much-needed tax rises and stimulus measures
+          </a>
+          <span class="date-source">The Conversation, 4 October 2013</span>
+        </li>
+
+        <li>
+          <a href="https://theconversation.com/abenomics-a-fix-for-japans-ailing-economy-and-a-boost-for-australia-12487" target="_blank" rel="noopener">
+            ‘Abenomics’: a fix for Japan’s ailing economy and a boost for Australia
+          </a>
+          <span class="date-source">The Conversation, 3 April 2013</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Shino Takayama
+  </footer>
+</body>
+</html>
