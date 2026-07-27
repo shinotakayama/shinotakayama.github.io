@@ -1,11 +1,476 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="/teaching/assets/css/style.css?v=0ce2849...">
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Shino Takayama, Associate Professor of Economics at The University of Queensland. Research in microeconomic theory, political economy, financial economics, social choice and experimental economics."
+  >
+
+  <title>Shino Takayama | Economist</title>
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --accent: #51247a;
+      --accent-dark: #3b1a59;
+      --soft-background: #f7f5f9;
+      --border: #ded9e3;
+      --content-width: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    /* Header */
+
+    .site-header {
+      background: var(--background);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 24px 28px 20px;
+    }
+
+    .site-name {
+      margin: 0;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.25rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .site-subtitle {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 28px;
+      margin-top: 22px;
+    }
+
+    .main-nav a {
+      color: var(--text);
+      font-size: 0.96rem;
+      font-weight: 500;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      color: var(--accent);
+    }
+
+    .main-nav a[aria-current="page"] {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Main content */
+
+    main {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 56px 28px 72px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 285px;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .intro h1 {
+      margin: 0 0 22px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .position {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.55;
+    }
+
+    .intro p {
+      margin: 0 0 20px;
+    }
+
+    .research-fields {
+      margin-top: 28px;
+      color: var(--accent-dark);
+      font-size: 0.96rem;
+      font-weight: 600;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      box-shadow: 0 8px 24px rgba(40, 25, 50, 0.10);
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 9px 17px;
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      font-size: 0.93rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .button-primary:hover,
+    .button-primary:focus {
+      background: var(--accent-dark);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .button-secondary {
+      background: #ffffff;
+      color: var(--accent);
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus {
+      background: var(--soft-background);
+      text-decoration: none;
+    }
+
+    /* Sections */
+
+    section {
+      margin-top: 68px;
+    }
+
+    section h2 {
+      margin: 0 0 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      font-weight: 500;
+    }
+
+    .news-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .news-list li {
+      display: grid;
+      grid-template-columns: 115px minmax(0, 1fr);
+      gap: 22px;
+      padding: 17px 0;
+      border-bottom: 1px solid #ece8ef;
+    }
+
+    .news-date {
+      color: var(--muted);
+      font-size: 0.91rem;
+      font-weight: 600;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 42px;
+    }
+
+    .contact-grid p {
+      margin: 0;
+    }
+
+    .contact-label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      background: var(--soft-background);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 24px 28px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    /* Mobile layout */
+
+    @media (max-width: 760px) {
+      .header-inner {
+        padding: 20px;
+      }
+
+      .site-name {
+        font-size: 1.9rem;
+      }
+
+      .main-nav {
+        gap: 10px 20px;
+      }
+
+      main {
+        padding: 38px 20px 56px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .photo-column {
+        order: -1;
+        max-width: 270px;
+      }
+
+      .intro h1 {
+        font-size: 2.15rem;
+      }
+
+      .news-list li {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
 <body>
 
-<h1>Welcome to my page</h1>
+  <header class="site-header">
+    <div class="header-inner">
 
-<p>Hallo!</p>
+      <p class="site-name">Shino Takayama</p>
+
+      <p class="site-subtitle">
+        School of Economics · The University of Queensland
+      </p>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching/">Teaching</a>
+        <a href="cv.pdf">CV</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="intro" aria-labelledby="welcome-heading">
+
+      <div class="intro-text">
+
+        <h1 id="welcome-heading">Welcome to my website</h1>
+
+        <p class="position">
+          I am an Associate Professor in the
+          <a href="https://economics.uq.edu.au/">
+            School of Economics
+          </a>
+          at The University of Queensland.
+        </p>
+
+        <p>
+          My research lies at the intersection of microeconomic theory,
+          political economy, and financial economics. I am particularly
+          interested in how institutions shape strategic behaviour,
+          collective decision-making, the aggregation of dispersed
+          information, and economic outcomes.
+        </p>
+
+        <p>
+          My work combines rigorous theoretical modelling with empirical
+          and policy-oriented research.
+        </p>
+
+        <p class="research-fields">
+          Political economy and social choice · Financial economics ·
+          Experimental economics
+        </p>
+
+        <div class="quick-links">
+          <a class="button button-primary" href="research.html">
+            View my research
+          </a>
+
+          <a class="button button-secondary" href="cv.pdf">
+            Curriculum vitae
+          </a>
+        </div>
+
+      </div>
+
+      <div class="photo-column">
+        <img
+          class="profile-photo"
+          src="images/shino-takayama.png"
+          alt="Portrait of Shino Takayama"
+        >
+      </div>
+
+    </section>
+
+    <section id="news" aria-labelledby="news-heading">
+
+      <h2 id="news-heading">What is new?</h2>
+
+      <ul class="news-list">
+
+        <li>
+          <span class="news-date">June 2026</span>
+
+          <span>
+            “Peer Effects and Academic Performance: The Impact of
+            Secondary Schoolmates in Undergraduate Classrooms” was
+            published online in
+            <em>The B.E. Journal of Economic Analysis &amp; Policy</em>.
+          </span>
+        </li>
+
+        <li>
+          <span class="news-date">2026</span>
+
+          <span>
+            Appointed Deputy Director of Teaching and Learning in the
+            School of Economics at The University of Queensland.
+          </span>
+        </li>
+
+        <li>
+          <span class="news-date">July 2025</span>
+
+          <span>
+            “Proof of Stake Blockchains: An Axiomatization of Dynamic
+            Random Selection Rules,” with Yunlong Liu and Claudio
+            Mezzetti, received a revision request from
+            <em>Games and Economic Behavior</em>.
+          </span>
+        </li>
+
+      </ul>
+
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+
+      <h2 id="contact-heading">Contact</h2>
+
+      <div class="contact-grid">
+
+        <p>
+          <span class="contact-label">Affiliation</span>
+          School of Economics<br>
+          The University of Queensland<br>
+          Brisbane, Queensland, Australia
+        </p>
+
+        <p>
+          <span class="contact-label">Academic profiles</span>
+          <a href="https://economics.uq.edu.au/profile/139/shino-takayama">
+            UQ profile
+          </a>
+          <br>
+          <!-- Add your Google Scholar link here -->
+          <!-- Add your ORCID link here -->
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      © 2026 Shino Takayama
+    </div>
+  </footer>
 
 </body>
 </html>
