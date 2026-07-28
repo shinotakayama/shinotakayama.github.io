@@ -1,1 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="About Shino Takayama, Associate Professor of Economics at The University of Queensland."
+  >
 
+  <title>About | Shino Takayama</title>
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --accent: #51247a;
+      --accent-dark: #3b1a59;
+      --soft-background: #f7f5f9;
+      --border: #ded9e3;
+      --content-width: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    .site-header {
+      background: var(--background);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 24px 28px 20px;
+    }
+
+    .site-name {
+      margin: 0;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.25rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .site-subtitle {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 28px;
+      margin-top: 22px;
+    }
+
+    .main-nav a {
+      color: var(--text);
+      font-size: 0.96rem;
+      font-weight: 500;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      color: var(--accent);
+    }
+
+    .main-nav a[aria-current="page"] {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    main {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 40px 28px 72px;
+    }
+
+    .page-title {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    .page-intro {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    section + section {
+      margin-top: 62px;
+    }
+
+    section h2 {
+      margin: 0 0 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      font-weight: 500;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 42px;
+    }
+
+    .profile-item {
+      margin: 0;
+    }
+
+    .profile-label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 48px;
+      margin-top: 26px;
+    }
+
+    .research-grid h3 {
+      margin: 0 0 10px;
+      color: var(--accent-dark);
+      font-size: 1.03rem;
+    }
+
+    .research-grid ul,
+    .teaching-list {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .personal-grid {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
+    }
+
+    .personal-photo {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      box-shadow: 0 8px 24px rgba(40, 25, 50, 0.10);
+    }
+
+    .photo-caption {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .personal-text p {
+      margin: 0 0 18px;
+    }
+
+    .personal-list {
+      margin: 22px 0 0;
+      padding: 20px 24px 20px 44px;
+      background: var(--soft-background);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px 24px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 9px 17px;
+      border: 1px solid var(--accent);
+      border-radius: 4px;
+      font-size: 0.93rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .button-primary:hover,
+    .button-primary:focus {
+      background: var(--accent-dark);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      color: var(--accent);
+      font-size: 1.35rem;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover,
+    .social-icons a:focus {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    .site-footer {
+      background: var(--soft-background);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 24px 28px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        padding: 20px;
+      }
+
+      .site-name {
+        font-size: 1.9rem;
+      }
+
+      .main-nav {
+        gap: 10px 20px;
+      }
+
+      main {
+        padding: 38px 20px 56px;
+      }
+
+      .profile-grid,
+      .research-grid,
+      .personal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .personal-grid {
+        gap: 28px;
+      }
+
+      .personal-photo {
+        max-width: 360px;
+      }
+    }
+  </style>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  >
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="site-name">Shino Takayama</p>
+
+      <p class="site-subtitle">
+        School of Economics · The University of Queensland
+      </p>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching/">Teaching</a>
+        <a href="cv.pdf">CV</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="about-heading">
+      <h1 class="page-title" id="about-heading">About</h1>
+
+      <p class="page-intro">
+        I am an economist, teacher, pianist, tennis player, enthusiastic cook,
+        and devoted member of a lively household that includes my family and
+        two cats.
+      </p>
+    </section>
+
+    <section aria-labelledby="academic-heading">
+      <h2 id="academic-heading">Academic background</h2>
+
+      <div class="profile-grid">
+        <p class="profile-item">
+          <span class="profile-label">Position</span>
+          Associate Professor, School of Economics<br>
+          The University of Queensland
+        </p>
+
+        <p class="profile-item">
+          <span class="profile-label">Leadership and recognition</span>
+          Deputy Director of Teaching and Learning<br>
+          Senior Fellow of the Higher Education Academy (SFHEA)
+        </p>
+
+        <p class="profile-item">
+          <span class="profile-label">Education</span>
+          PhD in Economics<br>
+          University of Minnesota
+        </p>
+
+        <p class="profile-item">
+          <span class="profile-label">Current academic interests</span>
+          Microeconomic theory, political economy, social choice,
+          financial economics, and experimental economics
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="research-heading">
+      <h2 id="research-heading">Research</h2>
+
+      <p>
+        My research lies at the intersection of microeconomic theory,
+        political economy, and financial economics. I am particularly
+        interested in how institutions influence strategic behaviour,
+        collective decision-making, the aggregation of dispersed information,
+        and economic outcomes in markets and society.
+      </p>
+
+      <p>
+        My work combines rigorous theoretical modelling with empirical and
+        policy-oriented research.
+      </p>
+
+      <div class="research-grid">
+        <div>
+          <h3>Theoretical research</h3>
+          <ul>
+            <li>Microeconomic theory and game theory</li>
+            <li>Social choice and voting</li>
+            <li>Political competition</li>
+            <li>Financial economics and market microstructure</li>
+            <li>Information aggregation</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Empirical and policy-oriented research</h3>
+          <ul>
+            <li>Public economics</li>
+            <li>Political economy</li>
+            <li>Development-related issues</li>
+            <li>Education and economic outcomes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="teaching-heading">
+      <h2 id="teaching-heading">Teaching</h2>
+
+      <p>
+        I have taught undergraduate and postgraduate courses across economic
+        theory, finance, and applied economics. These include:
+      </p>
+
+      <ul class="teaching-list">
+        <li>Financial Economics</li>
+        <li>Economics of Financial Markets</li>
+        <li>International Trade and Investment</li>
+        <li>Quantitative Methods for Economics</li>
+        <li>Principles of Microeconomics</li>
+        <li>Principles of Macroeconomics</li>
+        <li>Industrial Organisation</li>
+        <li>Game Theory</li>
+        <li>Japanese Economy</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="personal-heading">
+      <h2 id="personal-heading">Beyond economics</h2>
+
+      <div class="personal-grid">
+        <div>
+          <img
+            class="personal-photo"
+            src="shino-about.jpeg"
+            alt="Shino Takayama enjoying a meal in Japan"
+          >
+          <p class="photo-caption">Enjoying yakiniku in Japan.</p>
+        </div>
+
+        <div class="personal-text">
+          <p>
+            Outside academia, what matters most to me is the quality of life I
+            share with my family. I enjoy learning, creating, travelling, and
+            spending time around a table with good food and conversation.
+          </p>
+
+          <p>
+            Music has been part of my life since childhood. I started playing
+            the piano at the age of three, stopped in my late teenage years,
+            and returned to it many years later when my son began learning.
+            Playing again has become one of my favourite ways to relax and
+            challenge myself.
+          </p>
+
+          <p>
+            I also enjoy tennis, swimming, yoga, cooking, Japanese food, good
+            wine, and oil painting. Our two cats, Sou and Moe, add considerable
+            energy and personality to daily life—and frequently supervise my
+            work from home.
+          </p>
+
+          <ul class="personal-list">
+            <li>Born and educated in Japan before moving to the United States for my PhD</li>
+            <li>Living and working in Australia for more than two decades</li>
+            <li>Playing piano since childhood—with a long interval in between</li>
+            <li>Always happy to discover excellent food, especially in Japan</li>
+            <li>Proud human to Sou and Moe</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="button button-primary" href="cv.pdf">
+          Download my CV
+        </a>
+
+        <div class="social-icons" aria-label="Social media links">
+          <a
+            href="https://www.linkedin.com/in/shino-takayama-840bb5118/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a
+            href="https://x.com/MclennanShino"
+            target="_blank"
+            rel="noopener"
+            aria-label="X"
+          >
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/shino.takayama"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a
+            href="https://www.instagram.com/shinotakayama/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      © 2026 Shino Takayama
+    </div>
+  </footer>
+</body>
+</html>
