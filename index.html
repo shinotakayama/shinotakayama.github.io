@@ -319,7 +319,22 @@
 
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  
+
+  .social-icons {
+    display: flex;
+    gap: 16px;          /* Increase or decrease this */
+    margin-top: 16px;
+}
+
+.social-icons a {
+    color: var(--accent);
+    font-size: 2rem;    /* About the size in your screenshot */
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--accent-dark);
+}
 </head>
 
 <body>
@@ -389,23 +404,23 @@
           </a>
         </div>
 
-        <a href="https://www.linkedin.com/in/shino-takayama-840bb5118/" target="_blank">
-    <i class="fa-brands fa-linkedin"></i>
-</a>
+<div class="social-icons">
+    <a href="https://www.linkedin.com/in/shino-takayama-840bb5118/" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
 
-<a href="https://x.com/MclennanShino" target="_blank">
-    <i class="fa-brands fa-x-twitter"></i>
-</a>
+    <a href="https://x.com/MclennanShino" target="_blank">
+        <i class="fa-brands fa-x-twitter"></i>
+    </a>
 
-<a href="https://www.facebook.com/shino.takayama" target="_blank">
-    <i class="fa-brands fa-facebook"></i>
-</a>
+    <a href="https://www.facebook.com/shino.takayama" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
 
-<a href="https://www.instagram.com/shinotakayama/" target="_blank">
-    <i class="fa-brands fa-instagram"></i>
-</a>
-        
-      </div>
+    <a href="https://www.instagram.com/shinotakayama/" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+</div>
 
       <div class="photo-column">
         <img
