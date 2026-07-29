@@ -213,6 +213,55 @@
       border-radius: 6px;
     }
 
+
+    .cats-intro {
+      max-width: 780px;
+      margin: 0 0 28px;
+    }
+
+    .cats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px;
+    }
+
+    .cat-card {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+      padding: 18px;
+      background: var(--soft-background);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .cat-card h3 {
+      margin: 0 0 10px;
+      color: var(--accent-dark);
+      font-size: 1.03rem;
+    }
+
+    .cat-card p {
+      margin: 0;
+    }
+
+    .cat-photo {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      display: block;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(40, 25, 50, 0.08);
+    }
+
+    @media (max-width: 900px) {
+      .cats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .actions {
       display: flex;
       flex-wrap: wrap;
@@ -295,7 +344,8 @@
 
       .profile-grid,
       .research-grid,
-      .personal-grid {
+      .personal-grid,
+      .cat-card {
         grid-template-columns: 1fr;
       }
 
@@ -443,9 +493,9 @@
           <img
             class="personal-photo"
             src="shino-about.jpeg"
-            alt="Shino Takayama enjoying a meal in South Koea"
+            alt="Shino Takayama enjoying Korean barbecue"
           >
-          <p class="photo-caption">Enjoying yakiniku in South Koea.</p>
+          <p class="photo-caption">Enjoying Korean barbecue.</p>
         </div>
 
         <div class="personal-text">
@@ -464,7 +514,7 @@
           </p>
 
           <p>
-            I also enjoy tennis, swimming, yoga, cooking, food, good
+            I also enjoy tennis, swimming, yoga, cooking, good food and
             wine, and oil painting. Our two cats, Sou and Moe, add considerable
             energy and personality to daily life—and frequently supervise my
             work from home.
@@ -474,11 +524,59 @@
             <li>Born and educated in Japan before moving to the United States for my PhD</li>
             <li>Living and working in Australia for more than two decades</li>
             <li>Playing piano since childhood—with a long interval in between</li>
-            <li>Exploring different cuisines, and sharing excellent food and wine with family and friends.</li>
-            <li>Proud human to Sou and Moe</li>
+            <li>Exploring different cuisines and sharing excellent food and wine with family and friends</li>
+            <li>Happily sharing life with Sou and Moe</li>
           </ul>
         </div>
       </div>
+
+    </section>
+
+
+    <section aria-labelledby="cats-heading">
+      <h2 id="cats-heading">Meet Sou &amp; Moe</h2>
+
+      <p class="cats-intro">
+        Sou and Moe are enthusiastic companions whenever I work from home.
+        They regularly inspect bags and boxes, supervise household activity,
+        and remind me that breaks are essential.
+      </p>
+
+      <div class="cats-grid">
+        <article class="cat-card">
+          <img
+            class="cat-photo"
+            src="IMG_3301.jpeg"
+            alt="Sou, a white and ginger cat, sitting inside a bag"
+          >
+
+          <div>
+            <h3>Sou</h3>
+            <p>
+              Curious and adventurous. Loves exploring bags, boxes, and anything new.
+            </p>
+          </div>
+        </article>
+
+        <article class="cat-card">
+          <img
+            class="cat-photo"
+            src="IMG_9022.jpeg"
+            alt="Moe, a black and white cat, sitting on a chair"
+          >
+
+          <div>
+            <h3>Moe</h3>
+            <p>
+              Calm and observant. The quiet supervisor of the household.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="connect-heading">
+      <h2 id="connect-heading">Connect</h2>
 
       <div class="actions">
         <a class="button button-primary" href="cv.pdf">
