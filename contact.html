@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Contact Shino Takayama, Associate Professor of Economics at The University of Queensland."
+  >
+
+  <title>Contact | Shino Takayama</title>
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --accent: #51247a;
+      --accent-dark: #3b1a59;
+      --soft-background: #f7f5f9;
+      --border: #ded9e3;
+      --content-width: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    .site-header {
+      background: var(--background);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 24px 28px 20px;
+    }
+
+    .site-name {
+      margin: 0;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.25rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .site-subtitle {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 28px;
+      margin-top: 22px;
+    }
+
+    .main-nav a {
+      color: var(--text);
+      font-size: 0.96rem;
+      font-weight: 500;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      color: var(--accent);
+    }
+
+    .main-nav a[aria-current="page"] {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    main {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 40px 28px 72px;
+    }
+
+    .page-title {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    .page-intro {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+      gap: 46px;
+      align-items: start;
+      margin-top: 42px;
+    }
+
+    .map-container {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(40, 25, 50, 0.08);
+    }
+
+    .map-container iframe {
+      display: block;
+      width: 100%;
+      height: 360px;
+      border: 0;
+    }
+
+    .contact-details {
+      padding: 28px;
+      background: var(--soft-background);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .contact-item + .contact-item {
+      margin-top: 30px;
+    }
+
+    .contact-item h2 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 8px;
+      color: var(--accent-dark);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .contact-item h2 i {
+      width: 22px;
+      color: var(--accent);
+      text-align: center;
+    }
+
+    .contact-item p {
+      margin: 0;
+    }
+
+    .contact-item address {
+      margin: 0;
+      font-style: normal;
+    }
+
+    .map-link {
+      margin: 12px 0 0;
+      font-size: 0.93rem;
+    }
+
+    .connect-section {
+      margin-top: 54px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+
+    .connect-title {
+      margin: 0 0 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.45rem;
+      font-weight: 500;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .social-icons a {
+      display: inline-flex;
+      color: var(--accent);
+      font-size: 1.4rem;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover,
+    .social-icons a:focus {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    .site-footer {
+      background: var(--soft-background);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 24px 28px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        padding: 20px;
+      }
+
+      .site-name {
+        font-size: 1.9rem;
+      }
+
+      .main-nav {
+        gap: 10px 20px;
+      }
+
+      main {
+        padding: 38px 20px 56px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .map-container iframe {
+        height: 320px;
+      }
+
+      .contact-details {
+        padding: 22px;
+      }
+    }
+  </style>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+  >
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="site-name">Shino Takayama</p>
+
+      <p class="site-subtitle">
+        School of Economics · The University of Queensland
+      </p>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching/">Teaching</a>
+        <a href="cv.pdf">CV</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="contact-heading">
+      <h1 class="page-title" id="contact-heading">Contact</h1>
+
+      <p class="page-intro">
+        I welcome enquiries about research collaborations, teaching,
+        postgraduate supervision, and academic opportunities.
+      </p>
+
+      <div class="contact-grid">
+        <div>
+          <div class="map-container">
+            <iframe
+              src="PASTE-YOUR-GOOGLE-MAPS-EMBED-LINK-HERE"
+              title="Map showing The University of Queensland, St Lucia"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <p class="map-link">
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=The+University+of+Queensland+St+Lucia"
+              target="_blank"
+              rel="noopener"
+            >
+              View on Google Maps →
+            </a>
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <h2>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              Email
+            </h2>
+
+            <p>
+              <a href="mailto:s.takayama1@uq.edu.au">
+                s.takayama1@uq.edu.au
+              </a>
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <h2>
+              <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+              School
+            </h2>
+
+            <p>
+              School of Economics<br>
+              The University of Queensland
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <h2>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              Address
+            </h2>
+
+            <address>
+              School of Economics<br>
+              The University of Queensland<br>
+              St Lucia QLD 4072<br>
+              Australia
+            </address>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="connect-section" aria-labelledby="connect-heading">
+      <h2 class="connect-title" id="connect-heading">Connect</h2>
+
+      <div class="social-icons" aria-label="Social media links">
+        <a
+          href="https://www.linkedin.com/in/shino-takayama-840bb5118/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a
+          href="https://x.com/MclennanShino"
+          target="_blank"
+          rel="noopener"
+          aria-label="X"
+        >
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a
+          href="https://www.facebook.com/shino.takayama"
+          target="_blank"
+          rel="noopener"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a
+          href="https://www.instagram.com/shinotakayama/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      © 2026 Shino Takayama
+    </div>
+  </footer>
+</body>
+</html>
