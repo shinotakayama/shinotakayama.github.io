@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Teaching materials and course pages by Shino Takayama."
+  >
+
+  <title>Teaching | Shino Takayama</title>
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --text: #202124;
+      --muted: #5f6368;
+      --accent: #51247a;
+      --accent-dark: #3b1a59;
+      --soft-background: #f7f5f9;
+      --border: #ded9e3;
+      --content-width: 1040px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    .site-header {
+      background: var(--background);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 24px 28px 20px;
+    }
+
+    .site-name {
+      margin: 0;
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2.25rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .site-subtitle {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 28px;
+      margin-top: 22px;
+    }
+
+    .main-nav a {
+      color: var(--text);
+      font-size: 0.96rem;
+      font-weight: 500;
+    }
+
+    .main-nav a:hover,
+    .main-nav a:focus {
+      color: var(--accent);
+    }
+
+    .main-nav a[aria-current="page"] {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    main {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 40px 28px 72px;
+    }
+
+    .page-title {
+      margin: 0 0 14px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 500;
+      line-height: 1.15;
+    }
+
+    .page-intro {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 40px;
+    }
+
+    .course-card {
+      display: flex;
+      min-height: 128px;
+      padding: 22px 24px;
+      background: var(--soft-background);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .course-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .course-card a {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .course-card a:hover,
+    .course-card a:focus {
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    .course-title {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.18rem;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+
+    .course-link {
+      margin-top: 16px;
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .contact-note {
+      margin-top: 48px;
+      padding-top: 26px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    .site-footer {
+      background: var(--soft-background);
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      max-width: var(--content-width);
+      margin: 0 auto;
+      padding: 24px 28px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 760px) {
+      .header-inner {
+        padding: 20px;
+      }
+
+      .site-name {
+        font-size: 1.9rem;
+      }
+
+      .main-nav {
+        gap: 10px 20px;
+      }
+
+      main {
+        padding: 38px 20px 56px;
+      }
+
+      .course-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .course-card {
+        min-height: 0;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="site-name">Shino Takayama</p>
+
+      <p class="site-subtitle">
+        School of Economics · The University of Queensland
+      </p>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="teaching.html" aria-current="page">Teaching</a>
+        <a href="cv.pdf">CV</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section aria-labelledby="teaching-heading">
+      <h1 class="page-title" id="teaching-heading">Teaching</h1>
+
+      <p class="page-intro">
+        Course pages and teaching materials for economics, finance, game theory,
+        industrial organisation, and related subjects.
+      </p>
+
+      <div class="course-grid">
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/2103new/" target="_blank" rel="noopener">
+            <h2 class="course-title">Financial Economics New (for Undergraduates)</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/2103/" target="_blank" rel="noopener">
+            <h2 class="course-title">Financial Economics (for Undergraduates)</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/8000/" target="_blank" rel="noopener">
+            <h2 class="course-title">Quantitative Skills for Economics</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/7200/" target="_blank" rel="noopener">
+            <h2 class="course-title">Economics of Financial Markets</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/6021/" target="_blank" rel="noopener">
+            <h2 class="course-title">Financial Economics (for Masters)</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/mathfinan/" target="_blank" rel="noopener">
+            <h2 class="course-title">Financial Economics in Continuous Time</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/3050/" target="_blank" rel="noopener">
+            <h2 class="course-title">Game Theory and Strategy</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/3400/" target="_blank" rel="noopener">
+            <h2 class="course-title">Industrial Organisation</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/7520/" target="_blank" rel="noopener">
+            <h2 class="course-title">International Macroeconomics and Finance</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+
+        <article class="course-card">
+          <a href="https://shinotakayama.github.io/jpnecon/" target="_blank" rel="noopener">
+            <h2 class="course-title">Japanese Economy</h2>
+            <span class="course-link">Open course page →</span>
+          </a>
+        </article>
+      </div>
+
+      <p class="contact-note">
+        Questions about teaching materials may be sent to
+        <a href="mailto:s.takayama1@uq.edu.au">s.takayama1@uq.edu.au</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      © 2026 Shino Takayama
+    </div>
+  </footer>
+</body>
+</html>
